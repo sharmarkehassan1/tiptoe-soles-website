@@ -1,0 +1,513 @@
+/* =========================
+   ROOT COLOURS
+========================= */
+:root {
+  --sidebar-bg: linear-gradient(180deg, #6a5acd, #7b68ee);
+  --main-bg: #f4f4f4;
+  --card-bg: #ffffff;
+  --primary: #6a5acd;
+  --primary-dark: #5a4bbd;
+  --text-dark: #222222;
+  --border-color: #d9d9d9;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--main-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: var(--sidebar-bg);
+  color: white;
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar > a {
+  display: block;
+  text-align: center;
+}
+
+.logo {
+  width: 140px;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 15px 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 16px;
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  padding: 0 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO
+   Supports old and new class names
+========================= */
+.hero-banner,
+.hero-section,
+.hero {
+  background: linear-gradient(135deg, #6a5acd, #7b68ee);
+  color: white;
+  padding: 50px;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+}
+
+.hero-banner h1,
+.hero-section h1,
+.hero h1,
+.hero-banner h2,
+.hero-section h2,
+.hero h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.hero-subtitle,
+.hero h3 {
+  color: #ece6ff;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.hero-text,
+.hero p {
+  max-width: 650px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 11px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--primary);
+  padding: 10px 18px;
+  text-decoration: none;
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* =========================
+   SECTION CARDS
+   Supports old and new class names
+========================= */
+.home-section,
+.page-heading,
+.page-section,
+.about-snippet,
+.info-card,
+.contact-details,
+.contact-form-wrapper,
+.login-card,
+.wishlist-card,
+.card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+}
+
+/* remove top gap on inner pages */
+.page-heading {
+  margin-top: 0;
+  border-radius: 0 0 12px 12px;
+}
+
+.page-heading h1,
+.page-heading h2,
+.home-section h2,
+.about-snippet h2,
+.info-card h2,
+.contact-details h2,
+.contact-form-wrapper h2,
+.login-card h2,
+.card h2 {
+  margin-top: 0;
+}
+
+.section-intro {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   TEXT LINKS
+========================= */
+.text-link,
+.page-section a,
+.home-section a,
+.about-snippet a,
+.card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text-link:hover,
+.page-section a:hover,
+.home-section a:hover,
+.about-snippet a:hover,
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   PRODUCT GRID / CARDS
+========================= */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  width: 220px;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img,
+.product-image {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.product-card h3,
+.product-name {
+  margin: 0 0 10px;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  margin: 0 0 12px;
+  color: #444444;
+  line-height: 1.5;
+}
+
+.product-price {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* =========================
+   ABOUT PAGE LAYOUT
+========================= */
+.about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 2 1 600px;
+}
+
+.about-aside {
+  flex: 1 1 280px;
+}
+
+.about-list {
+  padding-left: 20px;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   CONTACT / FEEDBACK LAYOUT
+========================= */
+.contact-section {
+  margin-bottom: 30px;
+}
+
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.contact-details {
+  flex: 1 1 420px;
+}
+
+.contact-form-wrapper {
+  flex: 1 1 480px;
+}
+
+/* =========================
+   FORMS
+========================= */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.required {
+  color: #cc0000;
+}
+
+/* =========================
+   LOGIN
+========================= */
+.login-layout {
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 520px;
+}
+
+.login-note {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: white;
+  padding: 28px;
+  border-radius: 12px 12px 0 0;
+  margin-top: auto;
+  box-shadow: var(--shadow);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-policy-links {
+  margin-bottom: 12px;
+}
+
+.footer-policy-links a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.footer-policy-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-container p {
+  margin: 10px 0;
+}
+
+/* social icons wrapper */
+.footer-links,
+.footer-icons {
+  margin-top: 12px;
+}
+
+/* if links are wrapped in <a> */
+.footer-links a,
+.footer-icons a {
+  text-decoration: none;
+}
+
+/* IMPORTANT: keep icons small even if image tag has no class */
+.footer-links img,
+.footer-icons img,
+.social-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .hero-banner,
+  .hero-section,
+  .hero {
+    padding: 35px 25px;
+  }
+
+  .hero-banner h1,
+  .hero-section h1,
+  .hero h1,
+  .hero-banner h2,
+  .hero-section h2,
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-grid {
+    justify-content: center;
+  }
+
+  .about-layout,
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .contact-details,
+  .contact-form-wrapper,
+  .about-text,
+  .about-aside {
+    width: 100%;
+  }
+}
